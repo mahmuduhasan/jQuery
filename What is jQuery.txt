@@ -1,0 +1,5 @@
+What is jQuery?
+-> It is a library of JavaScript.
+-> Write less do more.
+-> jQuery greatly simplipies JavaScrtipt programming.
+-> Make easier use of JS on website.

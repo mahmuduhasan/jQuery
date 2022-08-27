@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <!-- <script src="./jquery-3.6.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").on({
+          click: function () {
+            $("#para").css("font-size", "50px");
+          },
+          dblclick: function () {
+            $("#coloredDiv").css(
+              "box-shadow",
+              "29px 29px 8px #c3c3c3,-29px -29px 8px #fdfdfd"
+            );
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="para">This is P1</p>
+    <p class="paraClass">This is P2</p>
+    <p class="paraClass">This is P3</p>
+    <button>Click me</button>
+    <div
+      style="background-color: brown; height: 200px; width: 200px; margin: 20px"
+      id="coloredDiv"
+    ></div>
+    <script>
+      // $(document).ready(function () {
+      //   alert("jQuery Added.");
+      // });
+      // $("p").hide();
+      // $(".paraClass").hide();
+      // $("p#para").hide();
+      // $(this).hide();
+      $("button").click(function () {
+        // $("#coloredDiv").hide();
+        // $(this).hide();
+      });
+      $("button").dblclick(function () {
+        // $("#coloredDiv").hide();
+        // $(this).hide();
+      });
+
+      $("#coloredDiv").mouseenter(function () {
+        // $("#para").hide();
+      });
+
+      $("#coloredDiv").mouseleave(function () {
+        // $("#para").hide();
+      });
+
+      $("#coloredDiv").hover(
+        function () {
+          // $("#para").hide();
+        },
+        function () {
+          // $("#para").show();
+        }
+      );
+
+      $("#coloredDiv").on({
+        click: function () {
+          $("p").hide();
+        },
+        mouseenter: function () {
+          $("#coloredDiv").css("background-color", "red");
+        },
+        mouseleave: function () {
+          $("#coloredDiv").css("background-color", "green");
+        },
+      });
+    </script>
+  </body>
+</html>
