@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Manipulating HTML</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+          // var text = $("p").text();
+          // $("div").html("<h1>Heading</h1>");
+          // alert(text);
+          // var value = $("#textInput").val();
+          // alert(value);
+          // $("#link").attr("href", "https://www.facebook.com");
+          $("#link").attr({
+            class: "design",
+            href: "https://www.w3school.org",
+          });
+        });
+        $("#list").append("<li>Orange</li>");
+        $("#list").prepend("<li>Purple</li>");
+        $("#list").after("<div><a href='#'>Link With After</a></div>");
+        $("#list").before("<div><a href='#'>Link With Before</a></div>");
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>This is a P tag!</p>
+      <a href="https://www.google.com" id="link">Link</a>
+    </div>
+    <form>
+      <input type="text" id="textInput" />
+    </form>
+    <button id="btn">Button</button>
+    <ul id="list">
+      <li>Red</li>
+      <li>Green</li>
+      <li>Blue</li>
+    </ul>
+  </body>
+</html>
